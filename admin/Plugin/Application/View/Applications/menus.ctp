@@ -79,7 +79,7 @@ echo $this->Html->script(array('jquery.validationEngine-en', 'jquery.validationE
                                 <div class="col-md-2">
                                     <div class="form-group">
                             <?php 
-                              echo $this->Form->input($model . '.application_role_id', array('type' => 'select','options' => $category_list, 'class' => 'form-control is_home_page', 'div' => false, 'label' => false));
+                              echo $this->Form->input($model . '.user_role_id', array('type' => 'select','options' => $category_list, 'class' => 'form-control is_home_page', 'div' => false, 'label' => false));
                             ?>
 
                                     </div>

@@ -7013,3 +7013,158 @@ Stack Trace:
 #11 C:\xampp\htdocs\myapis\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ApplicationsController), Object(CakeRequest))
 #12 C:\xampp\htdocs\myapis\admin\webroot\index.php(107): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #13 {main}
+2018-04-02 20:41:21 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /myapis/admin/images/favicon.ico
+Stack Trace:
+#0 C:\xampp\htdocs\myapis\admin\webroot\index.php(107): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-04-02 20:49:23 Error: [ParseError] syntax error, unexpected ')'
+Request URL: /myapis/admin/application/applications/menus
+Stack Trace:
+#0 [internal function]: App::load('ApplicationsCon...')
+#1 [internal function]: spl_autoload_call('ApplicationsCon...')
+#2 C:\xampp\htdocs\myapis\lib\Cake\Routing\Dispatcher.php(266): class_exists('ApplicationsCon...')
+#3 C:\xampp\htdocs\myapis\lib\Cake\Routing\Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 C:\xampp\htdocs\myapis\lib\Cake\Routing\Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 C:\xampp\htdocs\myapis\admin\webroot\index.php(107): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2018-04-02 20:49:40 Error: [MissingActionException] Action ApplicationsController::create_login() could not be found.
+Exception Attributes: array (
+  'controller' => 'ApplicationsController',
+  'action' => 'create_login',
+)
+Request URL: /myapis/admin/application/applications/create_login?application_id=
+Stack Trace:
+#0 C:\xampp\htdocs\myapis\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\myapis\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ApplicationsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\myapis\admin\webroot\index.php(107): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-04-02 20:49:58 Error: [MissingActionException] Action ApplicationsController::create_login() could not be found.
+Exception Attributes: array (
+  'controller' => 'ApplicationsController',
+  'action' => 'create_login',
+)
+Request URL: /myapis/admin/application/applications/create_login?application_id=
+Stack Trace:
+#0 C:\xampp\htdocs\myapis\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\myapis\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ApplicationsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\myapis\admin\webroot\index.php(107): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-04-02 20:50:43 Error: [MissingActionException] Action ApplicationsController::create_login() could not be found.
+Exception Attributes: array (
+  'controller' => 'ApplicationsController',
+  'action' => 'create_login',
+)
+Request URL: /myapis/admin/application/applications/create_login?application_id=OQ%3D%3D&application_role_id=NA%3D%3D
+Stack Trace:
+#0 C:\xampp\htdocs\myapis\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\myapis\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ApplicationsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\myapis\admin\webroot\index.php(107): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-04-02 20:52:14 Error: [MissingActionException] Action ApplicationsController::create_login() could not be found.
+Exception Attributes: array (
+  'controller' => 'ApplicationsController',
+  'action' => 'create_login',
+)
+Request URL: /myapis/admin/application/applications/create_login?application_id=OQ%3D%3D&application_role_id=NA%3D%3D&menu=MQ%3D%3D
+Stack Trace:
+#0 C:\xampp\htdocs\myapis\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\myapis\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ApplicationsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\myapis\admin\webroot\index.php(107): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-04-02 20:52:26 Error: [MissingActionException] Action ApplicationsController::create_login() could not be found.
+Exception Attributes: array (
+  'controller' => 'ApplicationsController',
+  'action' => 'create_login',
+)
+Request URL: /myapis/admin/application/applications/create_login?application_id=OQ%3D%3D&application_role_id=NA%3D%3D&menu=MQ%3D%3D
+Stack Trace:
+#0 C:\xampp\htdocs\myapis\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\myapis\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ApplicationsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\myapis\admin\webroot\index.php(107): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-04-02 21:26:43 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ApplicationRole.application_role_id' in 'where clause'
+Request URL: /myapis/admin/application/applications/create_login?application_id=OQ%3D%3D&application_role_id=NA%3D%3D&menu=MQ%3D%3D
+Stack Trace:
+#0 C:\xampp\htdocs\myapis\lib\Cake\Model\Datasource\DboSource.php(461): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\myapis\lib\Cake\Model\Datasource\DboSource.php(427): DboSource->_execute('SELECT `Applica...', Array)
+#2 C:\xampp\htdocs\myapis\lib\Cake\Model\Datasource\DboSource.php(664): DboSource->execute('SELECT `Applica...', Array, Array)
+#3 C:\xampp\htdocs\myapis\lib\Cake\Model\Datasource\DboSource.php(1113): DboSource->fetchAll('SELECT `Applica...', Array)
+#4 C:\xampp\htdocs\myapis\lib\Cake\Model\Model.php(3031): DboSource->read(Object(AppModel), Array)
+#5 C:\xampp\htdocs\myapis\lib\Cake\Model\Model.php(3003): Model->_readDataSource('first', Array)
+#6 C:\xampp\htdocs\myapis\admin\Plugin\Application\Controller\ApplicationsController.php(412): Model->find('first', Array)
+#7 [internal function]: ApplicationsController->create_login()
+#8 C:\xampp\htdocs\myapis\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(ApplicationsController), Array)
+#9 C:\xampp\htdocs\myapis\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\myapis\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ApplicationsController), Object(CakeRequest))
+#11 C:\xampp\htdocs\myapis\admin\webroot\index.php(107): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2018-04-02 22:02:24 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Menu.application_role_id' in 'where clause'
+Request URL: /myapis/admin/application/applications/menus
+Stack Trace:
+#0 C:\xampp\htdocs\myapis\lib\Cake\Model\Datasource\DboSource.php(461): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\myapis\lib\Cake\Model\Datasource\DboSource.php(427): DboSource->_execute('SELECT `Menu`.`...', Array)
+#2 C:\xampp\htdocs\myapis\lib\Cake\Model\Datasource\DboSource.php(664): DboSource->execute('SELECT `Menu`.`...', Array, Array)
+#3 C:\xampp\htdocs\myapis\lib\Cake\Model\Datasource\DboSource.php(1113): DboSource->fetchAll('SELECT `Menu`.`...', Array)
+#4 C:\xampp\htdocs\myapis\lib\Cake\Model\Model.php(3031): DboSource->read(Object(AppModel), Array)
+#5 C:\xampp\htdocs\myapis\lib\Cake\Model\Model.php(3003): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\myapis\admin\Plugin\Application\Controller\ApplicationsController.php(358): Model->find('all', Array)
+#7 [internal function]: ApplicationsController->menus()
+#8 C:\xampp\htdocs\myapis\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(ApplicationsController), Array)
+#9 C:\xampp\htdocs\myapis\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\myapis\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ApplicationsController), Object(CakeRequest))
+#11 C:\xampp\htdocs\myapis\admin\webroot\index.php(107): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2018-04-02 22:02:31 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Menu.application_role_id' in 'where clause'
+Request URL: /myapis/admin/application/applications/menus
+Stack Trace:
+#0 C:\xampp\htdocs\myapis\lib\Cake\Model\Datasource\DboSource.php(461): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\myapis\lib\Cake\Model\Datasource\DboSource.php(427): DboSource->_execute('SELECT `Menu`.`...', Array)
+#2 C:\xampp\htdocs\myapis\lib\Cake\Model\Datasource\DboSource.php(664): DboSource->execute('SELECT `Menu`.`...', Array, Array)
+#3 C:\xampp\htdocs\myapis\lib\Cake\Model\Datasource\DboSource.php(1113): DboSource->fetchAll('SELECT `Menu`.`...', Array)
+#4 C:\xampp\htdocs\myapis\lib\Cake\Model\Model.php(3031): DboSource->read(Object(AppModel), Array)
+#5 C:\xampp\htdocs\myapis\lib\Cake\Model\Model.php(3003): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\myapis\admin\Plugin\Application\Controller\ApplicationsController.php(358): Model->find('all', Array)
+#7 [internal function]: ApplicationsController->menus()
+#8 C:\xampp\htdocs\myapis\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(ApplicationsController), Array)
+#9 C:\xampp\htdocs\myapis\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\myapis\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ApplicationsController), Object(CakeRequest))
+#11 C:\xampp\htdocs\myapis\admin\webroot\index.php(107): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2018-04-02 22:02:51 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Menu.application_role_id' in 'where clause'
+Request URL: /myapis/admin/application/applications/menus
+Stack Trace:
+#0 C:\xampp\htdocs\myapis\lib\Cake\Model\Datasource\DboSource.php(461): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\myapis\lib\Cake\Model\Datasource\DboSource.php(427): DboSource->_execute('SELECT `Menu`.`...', Array)
+#2 C:\xampp\htdocs\myapis\lib\Cake\Model\Datasource\DboSource.php(664): DboSource->execute('SELECT `Menu`.`...', Array, Array)
+#3 C:\xampp\htdocs\myapis\lib\Cake\Model\Datasource\DboSource.php(1113): DboSource->fetchAll('SELECT `Menu`.`...', Array)
+#4 C:\xampp\htdocs\myapis\lib\Cake\Model\Model.php(3031): DboSource->read(Object(AppModel), Array)
+#5 C:\xampp\htdocs\myapis\lib\Cake\Model\Model.php(3003): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\myapis\lib\Cake\Model\Model.php(2833): Model->find('all', Array)
+#7 C:\xampp\htdocs\myapis\admin\Plugin\Application\Controller\ApplicationsController.php(372): Model->deleteAll(Array)
+#8 [internal function]: ApplicationsController->menus()
+#9 C:\xampp\htdocs\myapis\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(ApplicationsController), Array)
+#10 C:\xampp\htdocs\myapis\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 C:\xampp\htdocs\myapis\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ApplicationsController), Object(CakeRequest))
+#12 C:\xampp\htdocs\myapis\admin\webroot\index.php(107): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2018-04-02 22:07:32 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'UserRole.menu_name' in 'field list'
+Request URL: /myapis/admin/application/applications/create_login?application_id=OQ%3D%3D&application_role_id=NA%3D%3D&menu=MQ%3D%3D
+Stack Trace:
+#0 C:\xampp\htdocs\myapis\lib\Cake\Model\Datasource\DboSource.php(461): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\myapis\lib\Cake\Model\Datasource\DboSource.php(427): DboSource->_execute('SELECT `Menu`.`...', Array)
+#2 C:\xampp\htdocs\myapis\lib\Cake\Model\Datasource\DboSource.php(664): DboSource->execute('SELECT `Menu`.`...', Array, Array)
+#3 C:\xampp\htdocs\myapis\lib\Cake\Model\Datasource\DboSource.php(1113): DboSource->fetchAll('SELECT `Menu`.`...', Array)
+#4 C:\xampp\htdocs\myapis\lib\Cake\Model\Model.php(3031): DboSource->read(Object(AppModel), Array)
+#5 C:\xampp\htdocs\myapis\lib\Cake\Model\Model.php(3003): Model->_readDataSource('first', Array)
+#6 C:\xampp\htdocs\myapis\admin\Plugin\Application\Controller\ApplicationsController.php(434): Model->find('first', Array)
+#7 [internal function]: ApplicationsController->create_login()
+#8 C:\xampp\htdocs\myapis\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(ApplicationsController), Array)
+#9 C:\xampp\htdocs\myapis\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\myapis\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ApplicationsController), Object(CakeRequest))
+#11 C:\xampp\htdocs\myapis\admin\webroot\index.php(107): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
