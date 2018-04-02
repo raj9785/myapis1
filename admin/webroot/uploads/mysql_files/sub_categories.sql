@@ -1,0 +1,1 @@
+CREATE TABLE `sub_categories` (`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,`name` varchar(255) NOT NULL ,`application_id` int(6) NOT NULL,`is_active` tinyint(1) NOT NULL DEFAULT '1',`created_on` datetime DEFAULT NULL,`created_by` int(11) NOT NULL,) ENGINE=InnoDB DEFAULT CHARSET=utf8;
