@@ -1,5 +1,4 @@
 <?php
-
 define('SUBDIR', '/');
 define('SUBDIR_IMAGE', '/');
 define('DBHOST', "localhost");
