@@ -18,6 +18,22 @@ echo $this->Html->script(array('jquery.validationEngine-en', 'jquery.validationE
             $("#primary_key").empty().html(options);
 
         });
+        
+        $("#table_name").on("change",function(){
+            $("#submit").attr('disabled', 'disabled');
+            $("#table_field").attr('disabled', 'disabled');
+            $("#table_field").empty();
+            $.ajax({
+                type: 'POST',
+                url: '<?php echo $this->Html->url(array('plugin' => 'application', 'controller' => 'applications', 'action' => 'get_field_list')) ?>',
+                data: 'table_name=' + $(this).val(),
+                success: function(data) {
+                    $("#submit").removeAttr('disabled');
+                    $("#table_field").removeAttr('disabled');
+                    $("#table_field").html(data);
+                }
+            });
+        });
 
     });
     cloneIndex = 2;
@@ -131,6 +147,25 @@ echo $this->Html->script(array('jquery.validationEngine-en', 'jquery.validationE
 
                                 </div>
                             </div>
+                            
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label">Table</label>
+                                        <?php 
+                                         echo $this->Form->input($model . '.table_name', array('type' => 'select', 'empty' => 'Select','options' => $tableNames, 'class' => 'form-control', 'id' => 'foreign_key_ref_table', 'div' => false, 'label' => false)); ?>
+                                        <span id="email-error" class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label">Field</label>
+                                        <?php 
+                                         echo $this->Form->input($model . '.table_field', array('type' => 'select', 'empty' => 'Select','options' => array(), 'class' => 'form-control', 'id' => 'table_field', 'div' => false, 'label' => false)); ?>
+                                        <span id="email-error" class="help-block"></span>
+                                    </div>
+                                </div>
+                            </div>    
 
 
 
