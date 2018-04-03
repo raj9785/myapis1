@@ -151,9 +151,9 @@ echo $this->Html->script(array('jquery.validationEngine-en', 'jquery.validationE
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label class="control-label">Table</label>
+                                        <label class="control-label">Select Table for login</label>
                                         <?php 
-                                         echo $this->Form->input($model . '.table_name', array('type' => 'select', 'empty' => 'Select','options' => $tableNames, 'class' => 'form-control', 'id' => 'foreign_key_ref_table', 'div' => false, 'label' => false)); ?>
+                                         echo $this->Form->input($model . '.table_name', array('type' => 'select', 'empty' => 'Select','options' => $tableNames, 'class' => 'form-control', 'id' => 'table_name', 'div' => false, 'label' => false)); ?>
                                         <span id="email-error" class="help-block"></span>
                                     </div>
                                 </div>
