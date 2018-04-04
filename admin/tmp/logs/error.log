@@ -7168,3 +7168,12 @@ Stack Trace:
 #10 C:\xampp\htdocs\myapis\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ApplicationsController), Object(CakeRequest))
 #11 C:\xampp\htdocs\myapis\admin\webroot\index.php(107): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #12 {main}
+2018-04-03 21:06:53 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /myapis/admin/images/favicon.ico
+Stack Trace:
+#0 C:\xampp\htdocs\myapis\admin\webroot\index.php(107): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

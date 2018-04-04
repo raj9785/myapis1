@@ -176,6 +176,27 @@ class DbHandler {
             return false;
         }
     }
+    
+    function insert_data($Data, $table, $application_id) {
+        //print_r($Data);
+        $field_name = implode(",", $Data[$table]['names']);
+        $data_placeholder = implode(",", $Data[$table]['data_placeholder']);
+        $data_types = implode("", $Data[$table]['data_types']);
+        $values_arr = $Data[$table]['values'];
+        $q = "INSERT INTO $table ($field_name) VALUES($data_placeholder)";
+        $stmt = $this->conn->prepare($q);
+        $bind_names[] = $data_types;
+        for ($i = 0; $i < count($Data[$table]['names']); $i++) {
+            $bind_name = $Data[$table]['names'][$i];
+            $$bind_name = $Data[$table]['values'][$i];
+            $bind_names[] = &$$bind_name;
+        }
+        call_user_func_array(array($stmt, 'bind_param'), $bind_names);
+        $result = $stmt->execute();
+        $insert_id = $stmt->insert_id;
+        $stmt->close();
+        return $this->GetRecordByID($insert_id, $table, $SelectArr = array());
+    }
 
     public function sendnotification_android($message, $device_token, $booking_id = null) {
 

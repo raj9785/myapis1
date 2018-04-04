@@ -4,9 +4,10 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/xampp/htdocs/myapis/admin/Plugin/Application/Controller/ApplicationsController.php</file>
-            <file>file:/C:/xampp/htdocs/myapis/admin/Plugin/Application/View/Applications/add_table.ctp</file>
-            <file>file:/C:/xampp/htdocs/myapis/admin/Plugin/Application/View/Applications/menus.ctp</file>
+            <file>file:/C:/xampp/htdocs/myapis/apis/include/MainController.php</file>
+            <file>file:/C:/xampp/htdocs/myapis/apis/v1/index.php</file>
             <file>file:/C:/xampp/htdocs/myapis/admin/Plugin/Application/View/Applications/create_login.ctp</file>
+            <file>file:/C:/xampp/htdocs/myapis/apis/include/DbHandler.php</file>
         </group>
     </open-files>
 </project-private>

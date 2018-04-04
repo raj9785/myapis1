@@ -31,7 +31,8 @@ $apis_handler = array(
     'RegisterForm' => 'login',
     'OtpSend' => 'send_otp',
     'CategoryList' => 'get_listing',
-    'SubCategoryList' => 'get_listing'
+    'SubCategoryList' => 'get_listing',
+    'CategoryAdd' => 'insert_data'
 );
 
 

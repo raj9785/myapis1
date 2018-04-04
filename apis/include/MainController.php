@@ -15,6 +15,14 @@ class MainController {
         "WRONG_EMAIL" => WRONG_EMAIL,
         "WRONG_USER_NAME" => WRONG_MOBILE,
     );
+    public $table_handler = array(
+        'LoginForm' => 'users',
+        'RegisterForm' => 'users',
+        'OtpSend' => 'users',
+        'CategoryList' => 'categories',
+        'SubCategoryList' => 'sub_categories',
+        'CategoryAdd' => 'categories'
+    );
 
     function response($request_type, $status = 0, $error_code, $response_data = array(), $msg, $error = false) {
         $returnArr['request_type'] = $request_type;
@@ -42,7 +50,7 @@ class MainController {
         return array();
     }
 
-    function insert_table_array($form_data, $post_data, $request_type = '', $application_id = '', $table = '') {
+    function insert_table_array($form_data, $post_data, $request_type = '', $application_id = '', $table = '', $user_id = '') {
         $returnArr = array();
         $i = 0;
         if ($request_type == "RegisterForm") {
@@ -84,6 +92,21 @@ class MainController {
         $returnArr[$table]['data_types'][$i] = 's';
         $returnArr[$table]['data_placeholder'][$i] = '?';
         $i++;
+
+        if ($user_id) {
+            $returnArr[$table]['names'][$i] = 'created_by';
+            $returnArr[$table]['values'][$i] = $user_id;
+            $returnArr[$table]['data_types'][$i] = 'i';
+            $returnArr[$table]['data_placeholder'][$i] = '?';
+            $i++;
+            
+           
+            $returnArr[$table]['names'][$i] = 'application_id';
+            $returnArr[$table]['values'][$i] = $application_id;
+            $returnArr[$table]['data_types'][$i] = 'i';
+            $returnArr[$table]['data_placeholder'][$i] = '?';
+             $i++;
+        }
 
         if ($request_type == "OtpSend") {
             $returnArr[$table]['names'][$i] = 'application_id';
@@ -301,6 +324,46 @@ class MainController {
 
 
         return $this->response($request_type, $status, $error_code, $response_data, $errors_msg);
+    }
+
+    function check_duplicates() {
+        
+    }
+
+    function insert_data($post_data, $application_id) {
+        $db = new DbHandler();
+        $request_type = @$post_data['request_type'];
+        $login_id = @$post_data['login_id'];
+       
+        $status = 0;
+        $response_data = array();
+        $error_code = "";
+        $msg = "";
+        if (!empty($post_data)) {
+            $form_data = $post_data['json_data'];
+            if (!empty($form_data)) {
+                $CheckResponse = $this->check_duplicates($form_data, $application_id);
+                if (!empty($CheckResponse)) {
+                    $error_code = $CheckResponse['code'];
+                    $msg = $CheckResponse['message'];
+                } else {
+                    $Data = $this->insert_table_array($form_data, $post_data, $request_type, $application_id, $this->table_handler[$request_type], $login_id);
+                    
+                    $res = $db->insert_data($Data, $this->table_handler[$request_type], $application_id);
+                    $response_data = $res;
+                    $status = 1;
+                    $msg = "Submitted successfully";
+                }
+            } else {
+                $error_code = NO_DATA_POSTED;
+                $msg = "No Data Posted";
+            }
+        } else {
+            $error_code = NO_DATA_POSTED;
+            $msg = "No Data Posted";
+        }
+
+        return $this->response($request_type, $status, $error_code, $response_data, $msg);
     }
 
 }

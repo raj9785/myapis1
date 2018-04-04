@@ -18,8 +18,8 @@ echo $this->Html->script(array('jquery.validationEngine-en', 'jquery.validationE
             $("#primary_key").empty().html(options);
 
         });
-        
-        $("#table_name").on("change",function(){
+
+        $("#table_name").on("change", function () {
             $("#submit").attr('disabled', 'disabled');
             $("#table_field").attr('disabled', 'disabled');
             $("#table_field").empty();
@@ -27,7 +27,7 @@ echo $this->Html->script(array('jquery.validationEngine-en', 'jquery.validationE
                 type: 'POST',
                 url: '<?php echo $this->Html->url(array('plugin' => 'application', 'controller' => 'applications', 'action' => 'get_field_list')) ?>',
                 data: 'table_name=' + $(this).val(),
-                success: function(data) {
+                success: function (data) {
                     $("#submit").removeAttr('disabled');
                     $("#table_field").removeAttr('disabled');
                     $("#table_field").html(data);
@@ -97,7 +97,7 @@ echo $this->Html->script(array('jquery.validationEngine-en', 'jquery.validationE
                                     <div class="form-group">
                                         <label class="control-label">User Type </label>
                             <?php 
-                              echo $role_detail['UserRole']['name'];
+                              echo $role_details['UserRole']['name'];
                             ?>
 
                                     </div>
@@ -147,7 +147,7 @@ echo $this->Html->script(array('jquery.validationEngine-en', 'jquery.validationE
 
                                 </div>
                             </div>
-                            
+
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group">
@@ -176,7 +176,7 @@ echo $this->Html->script(array('jquery.validationEngine-en', 'jquery.validationE
                             </div>
 
 
-
+                            
 
 
 
